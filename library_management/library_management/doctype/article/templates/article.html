@@ -1,0 +1,59 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<div class="container mt-5">
+    <div class="article-page">
+        <h1 class="article-title">{{ title }}</h1>
+
+        <div class="article-content">
+            <!-- Article Image -->
+            <img src="{{ doc.image or '/assets/your_app/images/default-image.jpg' }}" 
+                alt="Article Image" class="article-image">
+
+            <!-- Article Details -->
+            <p><strong>Article Name:</strong> {{ doc.article_name }}</p>
+            <p><strong>Author:</strong> {{ doc.author }}</p>
+            <p><strong>ISBN:</strong> {{ doc.isbn }}</p>
+            <p><strong>Status:</strong> {{ doc.status }}</p>
+            <p><strong>Publisher:</strong> {{ doc.publisher }}</p>
+            <a href="http://127.0.0.1:8000/library-member/new">Go to Registration form</a>
+            <p><strong>Publish Date:</strong> {{ doc.publish }}</p>
+        </div>
+    </div>
+</div>
+
+<style>
+    .article-page {
+        max-width: 800px;
+        margin: auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .article-title {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #333;
+        text-align: center;
+    }
+    .article-image {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+    .article-content p {
+        font-size: 1.1rem;
+        color: #555;
+    }
+    .article-content a {
+        color: #007bff;
+        text-decoration: none;
+    }
+    .article-content a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+{% endblock %}

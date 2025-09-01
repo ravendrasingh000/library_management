@@ -1,0 +1,34 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2025-02-27 18:00:29.560305",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letterhead": null,
+ "modified": "2025-02-27 18:04:50.033401",
+ "modified_by": "Administrator",
+ "module": "Library Management",
+ "name": "Query Report",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT article_name, author\nFROM tabArticle",
+ "ref_doctype": "Article",
+ "report_name": "Query Report",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "librarian"
+  },
+  {
+   "role": "Library Member"
+  }
+ ],
+ "timeout": 0
+}
